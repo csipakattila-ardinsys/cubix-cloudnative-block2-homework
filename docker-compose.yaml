@@ -1,0 +1,15 @@
+networks:
+  nw-homework:
+services:
+  backapp-container:
+    image: homework-backapp:1.0.0
+    networks:
+      - nw-homework
+  frontapp-container:
+    image: homework-frontapp:1.0.0
+    networks:
+      - nw-homework
+    ports:
+      - 8080:8080
+    environment:
+      BACK_URL: http://backapp-container:8080

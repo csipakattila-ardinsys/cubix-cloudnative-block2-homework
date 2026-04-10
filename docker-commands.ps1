@@ -17,3 +17,5 @@ docker network rm nw-homework
 
 # run containers with compose (should cleanup manual run objects)
 docker compose up
+# cleanup
+docker compose down
